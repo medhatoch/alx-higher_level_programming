@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-from add_0 import add
 
-a = 1
-b = 2
+if __name__ == "__main__":
+    """Print the result of the addition 1 + 2."""
+    from add_0 import add
 
-result = add(a, b)
-print(f"{a} + {b} = {result}")
+    a = 1
+    b = 2
+    result = add(a, b)
+    print(f"{a} + {b} = {result}")

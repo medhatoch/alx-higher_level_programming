@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    """Handle basic arithmetic operations."""
 
+if __name__ == "__main__":
+    "Handle basic arithmetic operations."
     import sys
     from calculator_1 import add, sub, mul, div
 
@@ -9,18 +9,11 @@ if __name__ == "__main__":
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
 
-    a = int(sys.argv[1])
-    operator = sys.argv[2]
-    b = int(sys.argv[3])
-
-    if operator == '+':
-        result = add(a, b)
-    elif operator == '-':
-        result = sub(a, b)
-    elif operator == '*':
-        result = mul(a, b)
-    elif operator == '/':
-        result = div(a, b)
-    else:
+    operator = {"+": add, "-": sub, "*": mul, "/": div}
+    if sys.argv[2] not in list(operator.keys()):
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
+
+    a = int(sys.argv[1])
+    b = int(sys.argv[3])
+    print("{} {} {} = {}".format(a, sys.argv[2], b, operator[sys.argv[2]](a, b)))

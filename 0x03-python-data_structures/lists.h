@@ -27,4 +27,6 @@ int element_at(int *my_list, int idx);
 int replace_in_list(int *my_list, int idx, int element);
 void print_reversed_list_integer(int *my_list, size_t size);
 int *new_in_list(int *my_list, int idx, int element);
+char *no_c(char *my_string);
+
 #endif /* LISTS_H */

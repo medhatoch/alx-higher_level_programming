@@ -28,5 +28,6 @@ int replace_in_list(int *my_list, int idx, int element);
 void print_reversed_list_integer(int *my_list, size_t size);
 int *new_in_list(int *my_list, int idx, int element);
 char *no_c(char *my_string);
+void print_matrix_integer(matrix=[[]]);
 
 #endif /* LISTS_H */

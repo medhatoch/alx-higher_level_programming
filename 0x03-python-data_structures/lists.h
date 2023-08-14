@@ -23,6 +23,6 @@ int is_palindrome(listint_t **head);
 
 /* Function prototype */
 void print_list_integer(int *my_list, size_t size);
-
+int element_at(int *my_list, int idx);
 
 #endif /* LISTS_H */
